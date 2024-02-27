@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ali Al-Hasan">
+  <title>CRUDs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="crad">
+    <button class="btn-toggle">Wijzig 
+    Paginamodus</button>
+    <button class="Kopierechten" onclick="toggleParagraph()">Kopierechten &copy;</button>
+    <div id="toggleRecht">
+      <p>Deze systeem is een experimenteel project waarbij het grootste deel van de logica  in JavaScript is gebruikt.
+      </p>
+      <br>
+      <p> Dit systeem werkt alleen in JavaScript. We kunnen deze code converteren om met Node.js te werken. </p>
+      <br>
+      <p>Ten eerste stelt dit systeem u in staat om elk product te creëren op elke locatie.</p>
+      <br>
+      <p>De beperkingen in het systeem staan gebruikers toe om leesbare gegevens in te voeren.</p>
+      <br>
+      <p>Het systeem staat u toe om een product te maken op voorwaarde dat u de belastingwaarde, prijs, en het type product invoert.</p>
+      <br>
+      <p>Zonder deze informatie zal het systeem de ingevoerde gegevens weigeren.</p><br>
+      <p>U kunt 150 producten in één keer invoeren en deze data wordt opgeslagen in de browser.</p><br>
+      <p>Als u terugkeert naar de pagina, zult u merken dat de gegevens nog steeds aanwezig zijn!</p><br>
+      <p>U kunt ook zoeken op itemtype of merknaam die u hebt geregistreerd.</p><br>
+      <p>U kunt altijd de gegevens bewerken en individueel of volledig verwijderen.</p><br>
+      <p>Dit project duurde 4 dagen om te voltooien. Om dit venster te sluiten, klikt u nogmaals op de laatste knop die u hierheen heeft gebracht!</p>
+    </div>
+
+
+    <!-- Head -->
+    <div class="header">
+      <h2>Demonstratiesysteem</h2>
+      <h3>
+        Productbeheersysteem
+      </h3>
+    </div>
+    <!--Inputs  -->
+    <div class="content">
+      <input type="text" id="title" placeholder="Producttitel">
+      <div class="price">
+        <input onkeyup="getTotal()" type="text" id="price" placeholder="Prijs">
+        <input onkeyup="getTotal()" type="text" id="tax" placeholder="Belasting">
+        <input onkeyup="getTotal()" type="text" id="ads" placeholder="Advertenties">
+        <input onkeyup="getTotal()" type="text" id="discount" placeholder="Korting">
+      </div>
+      <div id="total"></div>
+
+      <input type="text" id="count" placeholder="Aantal">
+      <input type="text" id="category" placeholder="Categorie">
+      <button id="submit" class="btn">Aanmaken</button>
+    </div>
+    <!-- Outputs -->
+    <div class="outputs">
+      <div class="containData"></div>
+      <input type="text" id="search" placeholder="Zoeken" onkeyup="searchData(this.value)">
+      <div class="btnSearch">
+        <button onclick="searchModefn(this.id)" id="searchTitle">Zoeken Op Titel</button>
+        <button onclick="searchModefn(this.id)" id="searchCategory">Zoeken Op Categorie</button>
+      </div>
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Prijs</th>
+          <th>Belasting</th>
+          <th>Ads</th>
+          <th>Korting</th>
+          <th>Totaal</th>
+          <th>Categorie</th>
+          <th>Updaten</th>
+          <th>Wissen</th>
+        </thead>
+        <div id="deleteAllData"></div>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
+    
+      
+    
+    
+  </div>
+  
+  <script src="toggle.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

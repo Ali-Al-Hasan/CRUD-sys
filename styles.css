@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+    background-color: #eee;;
+    color: #223;
+    overflow-x: hidden;
+}
+body.dark-theme{
+  background-color: #223;
+  color: #edf;
+}
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: #223;
+    color: #edf;
+}
+body.light-theme {
+  background-color: #eee;;
+  color: #223;
+}}
+
+#toggleRecht{
+  text-align:center;
+  border-radius: 12px;
+  padding: 75px 20px;
+  z-index: 100000;
+  width: max-content;
+  margin: auto;
+  font-weight: 700;
+  font-size: 18px;
+  position: fixed;
+  background-color: #edf;
+  color: #223;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top:0;
+  height: 600px;
+  display: none;
+ overflow: auto;
+}
+input{
+ width: 100%;
+ height: 42px;   
+ outline: none;
+ border: none;
+ background-color: #211;
+ color: #edf;
+ margin: 6px 0;
+ padding: 8px;
+ font-size: 16px;
+ border-radius: 8px;
+}
+input:focus{
+    background-color: #101;
+    border: solid 1px #edf;
+    transform: scale(1.04);
+}
+.crad{
+    width: 85%;
+    margin: auto;
+}
+.header{
+    text-align: center;
+    margin: 12px 0;
+    
+    
+}
+.price{
+  display: flex;
+  justify-content: space-between;
+}
+.price input{
+    width: 24%;
+    margin: 6px 2px;
+}
+#total{
+    background-color: orangered;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+#total::before{
+    content: 'Total: ';
+
+}
+
+/* button*/
+.btn-toggle, .Kopierechten{
+    
+  padding: 12px 8px;
+  
+  margin: 6px;
+  border-radius: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid #eee 1px;
+  font-size: 14px;
+  color: #edf;  
+  background:#211
+}
+
+
+.btn,#update,#delete {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: orangered;
+    transition: all 0.2s ease;
+    width: 100%;
+ 
+    margin: 18px 0 6px 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .btn:active ,#update:active,#delete:active{
+    transform: scale(0.96);
+  }
+  
+  .btn:before,
+  .btn:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .btn:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, orangered 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, orangered 20%, transparent 30%),
+      radial-gradient(circle, orangered 20%, transparent 20%),
+      radial-gradient(circle, orangered 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, orangered 15%, transparent 20%),
+      radial-gradient(circle, orangered 20%, transparent 20%),
+      radial-gradient(circle, orangered 20%, transparent 20%),
+      radial-gradient(circle, orangered 20%, transparent 20%),
+      radial-gradient(circle, orangered 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.4s ease;
+  }
+  .btn:hover{
+    letter-spacing: 1px;
+  }
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+ 
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+/* /button/ */
+#searchTitle,#searchCategory {
+    width: 35%;
+    padding: 12px 24px;
+
+    margin: 6px;
+    border-radius: 24px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: solid #303 1px;
+    font-size: 14px;
+    color: #edf;  
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    background:#211
+}
+#searchTitle:hover,#searchCategory:hover {
+    -webkit-box-shadow: 1px 1px 13px orangered, -1px -1px 13px #545b78;
+    box-shadow: 1px 1px 13px orangered, -1px -1px 13px #545b78;
+    color: #edf;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  #searchTitle:active,#searchCategory:active {
+    transform: scale(0.96);
+  }
+.btnSearch{
+  display: flex;
+  justify-content: space-between;
+}
+table{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+table th{
+  text-transform: uppercase;
+}
+th,td{
+
+  padding: 6px;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+  /* For screens narrower than 768px */
+  table, tbody ,thead {
+    display: block;
+  }
+  thead tr {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 40px; /* Adjust line height as needed */
+  }
+  th {
+    flex: 1 1 auto; /* Ensure equal-width columns */
+    text-align: left; /* Align left for readability */
+  }
+ 
+  tr.show td {
+    display: table-cell; /* Show data cells on click */
+  }
+
+  thead{
+    width: 100%;
+    margin: 3px;
+  }
+  thead th{
+    margin: 0px;
+    padding: 2px;
+  }
+  thead :nth-child(9), :nth-child(10){
+    display: none;
+  }
+  td button{
+    display: none;
+  }
+  .Kopierechten{
+    display: none;
+  }
+}
+
+
+::selection{
+  background-color: transparent;
+}
